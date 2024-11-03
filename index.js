@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000; // Default to port 5000 if not specified
 
 // CORS configuration
 const corsOptions = {
-    origin: 'https://talkbridge.netlify.app', // Allow your frontend origin (adjust as needed for production)
+    origin: 'http://localhost:3000', // Allow your frontend origin (adjust as needed for production)
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
     credentials: true, // Allow credentials (cookies, authorization headers)
 };
