@@ -32,7 +32,7 @@ app.use(cors({
 // routes
 app.use("/api/v1/user",userRoute); 
 app.use("/api/v1/message",messageRoute);
-app.get('/temp',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("this is working")
 })
 
