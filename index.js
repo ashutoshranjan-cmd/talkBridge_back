@@ -45,7 +45,14 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-server.listen(PORT, () => {
-    connectDB(); // Connect to the database
-    console.log(`Server listening at port ${PORT}`);
+const startServer = async () => {
+    await connectDB(); // Connect to the database
+    server.listen(PORT, () => {
+        console.log(`Server listening at port ${PORT}`);
+    });
+};
+
+// Call the startServer function to initiate the server
+startServer().catch(err => {
+    console.error("Failed to start the server:", err);
 });
